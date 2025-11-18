@@ -1,0 +1,29 @@
+[
+  {
+    "id": 1,
+    "title": "Finish project README",
+    "description": "Write a clear README for the todo app project",
+    "priority": "High",
+    "status": "Pending",
+    "createdAt": "2025-11-01T10:00:00.000Z",
+    "dueDate": "2025-11-20"
+  },
+  {
+    "id": 2,
+    "title": "Buy groceries",
+    "description": "Milk, eggs, bread",
+    "priority": "Low",
+    "status": "In-progress",
+    "createdAt": "2025-11-10T12:30:00.000Z",
+    "dueDate": "2025-11-15"
+  },
+  {
+    "id": 3,
+    "title": "Plan presentation",
+    "description": "Slides for client meeting",
+    "priority": "Medium",
+    "status": "Completed",
+    "createdAt": "2025-10-25T09:15:00.000Z",
+    "dueDate": "2025-11-05"
+  }
+]
