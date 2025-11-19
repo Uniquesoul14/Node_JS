@@ -32,7 +32,7 @@ Express Router<br>
 3️⃣ Create a todo<br>
       POST /api/todos<br>
 
-<h2>Body example:</h2>
+   Body example:<br>
 {<br>
   "title": "Learn Node",<br>
   "priority": "High",<br>
