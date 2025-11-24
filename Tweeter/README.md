@@ -57,166 +57,154 @@ project/
 ```
 
 <h2>🚀 Backend Requirements</h2>
-1. CRUD API Endpoints
-1️⃣ GET /api/tweets
+1. CRUD API Endpoints<br>
+1️⃣ GET /api/tweets<br>
+Returns all tweets<br>
+Reads from data/tweets.json<br>
 
-Returns all tweets
+2️⃣ POST /api/tweets<br>
+Creates a new tweet<br>
+Required fields:<br>
+Field	Type	Required<br>
+username	string	✔<br>
+tweet	string	✔<br>
+Adds createdAt automatically<br>
+Stores the new tweet in tweets.json<br>
 
-Reads from data/tweets.json
+3️⃣ PUT /api/tweets/:id<br>
+Updates an existing tweet<br>
+Only tweet content can be edited<br>
+Marks the tweet as edited<br>
 
-2️⃣ POST /api/tweets
+4️⃣ DELETE /api/tweets/:id<br>
+Deletes tweet by ID<br>
+Saves updated list in tweets.json<br>
 
-Creates a new tweet
+<h2>🛡 Middleware Requirements</h2>
+1. Application-Level Middleware (logger.js)<br>
 
-Required fields:
+Logs:<br>
 
-Field	Type	Required
-username	string	✔
-tweet	string	✔
+METHOD  URL  TIME<br>
 
-Adds createdAt automatically
 
-Stores the new tweet in tweets.json
+Example:<br>
 
-3️⃣ PUT /api/tweets/:id
+POST /api/tweets   10:45:22 AM<br>
 
-Updates an existing tweet
+2. Route-Level Middleware (validateTweet.js)<br>
 
-Only tweet content can be edited
+Used on POST and PUT:<br>
 
-Marks the tweet as edited
+✔ Check if tweet is provided<br>
+✔ Check if tweet length ≥ 5 characters<br>
+✔ Check if username is not empty (POST only)<br>
 
-4️⃣ DELETE /api/tweets/:id
+Validation errors return:<br>
 
-Deletes tweet by ID
+400 Bad Request<br>
 
-Saves updated list in tweets.json
+💾 File-Based Database<br>
 
-🛡 Middleware Requirements
-1. Application-Level Middleware (logger.js)
+All tweets are stored inside:<br>
 
-Logs:
+backend/data/tweets.json<br>
 
-METHOD  URL  TIME
 
+The backend uses fs + path modules to read/write tweet data.<br>
 
-Example:
+Example search service:<br>
 
-POST /api/tweets   10:45:22 AM
+readTweets()<br>
 
-2. Route-Level Middleware (validateTweet.js)
+writeTweets()<br>
+<h2>
+🎨 Frontend Requirements (React)</h2>
 
-Used on POST and PUT:
+<h3>✔ Tweet Input Form</h3>
 
-✔ Check if tweet is provided
-✔ Check if tweet length ≥ 5 characters
-✔ Check if username is not empty (POST only)
+Fields:<br>
 
-Validation errors return:
+Username<br>
 
-400 Bad Request
+Tweet Content<br>
 
-💾 File-Based Database
+Submit Button<br>
 
-All tweets are stored inside:
+<h3>✔ Tweet List</h3>
 
-backend/data/tweets.json
+Each tweet card must show:<br>
 
+Username<br>
 
-The backend uses fs + path modules to read/write tweet data.
+Tweet text<br>
 
-Example search service:
+Created time<br>
 
-readTweets()
+"Edited" badge (if tweet was updated)<br>
 
-writeTweets()
+Edit button<br>
 
-🎨 Frontend Requirements (React)
-Features
-✔ Tweet Input Form
+Delete button<br>
 
-Fields:
+<h2>🔄 Fetch API Usage</h2>
 
-Username
+Frontend must use Fetch API:<br>
 
-Tweet Content
+Example:<br>
 
-Submit Button
+fetch("/api/tweets")<br>
 
-✔ Tweet List
 
-Each tweet card must show:
+No full URL required if proxy is configured.<br>
 
-Username
+<h2>⭐ Bonus Features (Optional)</h2>
 
-Tweet text
+Bootstrap UI<br>
 
-Created time
+280-character limit like Twitter<br>
 
-"Edited" badge (if tweet was updated)
+Live character counter<br>
 
-Edit button
+Highlight edited tweets<br>
 
-Delete button
+<h3>▶ How to Run the Project</h3>
+  Backend<br>
+      cd backend<br>
+      npm install<br>
+      npm start<br>
 
-🔄 Fetch API Usage
 
-Frontend must use Fetch API:
+By default backend runs at:<br>
 
-Example:
+http://localhost:5000<br>
 
-fetch("/api/tweets")
+  Frontend<br>
+      cd frontend<br>
+      npm install<br>
+      npm start<br>
 
 
-No full URL required if proxy is configured.
+Runs at:<br>
 
-⭐ Bonus Features (Optional)
+http://localhost:5173<br>
 
-Tailwind or Bootstrap UI
 
-280-character limit like Twitter
+If proxy is added in frontend/package.json:<br>
 
-Live character counter
+"proxy": "http://localhost:5000"<br>
 
-Highlight edited tweets
 
-▶ How to Run the Project
-Backend
-cd backend
-npm install
-npm start
+You can call APIs directly:<br>
 
+fetch("/api/tweets")<br>
 
-By default backend runs at:
+<h2>🎉 Final Deliverables</h2>
 
-http://localhost:5000
-
-Frontend
-cd frontend
-npm install
-npm start
-
-
-Runs at:
-
-http://localhost:3000
-
-
-If proxy is added in frontend/package.json:
-
-"proxy": "http://localhost:5000"
-
-
-You can call APIs directly:
-
-fetch("/api/tweets")
-
-🎉 Final Deliverables
-
-✔ Working Express Backend
-✔ Working React Frontend
-✔ CRUD Operations
-✔ Middleware Implemented
-✔ tweets.json acting as database
-✔ Fully functional UI similar to Twitter Home
-✔ Clean validation and proper logging
+✔ Working Express Backend<br>
+✔ Working React Frontend<br>
+✔ CRUD Operations<br>
+✔ Middleware Implemented<br>
+✔ tweets.json acting as database<br>
+✔ Fully functional UI similar to Twitter Home<br>
+✔ Clean validation and proper logging<br>
