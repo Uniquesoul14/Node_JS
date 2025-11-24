@@ -2,6 +2,12 @@
 🐦 Mini Twitter Clone — Full Stack Project</h1>
 
 A simple Twitter-like application built using Node.js + Express (Backend) and React (Frontend) that allows users to create, update, delete, and view tweets.
+<h2>Demo video</h2>
+
+
+
+https://github.com/user-attachments/assets/1f554a25-9450-4639-b59e-f6713448b946
+
 
 <h2>📌 Project Overview</h2>
 
