@@ -1,7 +1,7 @@
 import React from "react";
 
-// Using the uploaded image path as logo (replace if needed)
-const LOGO_PATH = "/mnt/data/13adb594-4382-4dca-a34c-c40ec8d68ccc.png";
+
+const LOGO_PATH = "/https://cdn.mos.cms.futurecdn.net/z3bn6deaxmrjmQHNEkpcZE.jpg";
 
 export default function SidebarLeft() {
   return (
