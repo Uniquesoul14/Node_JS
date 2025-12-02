@@ -23,3 +23,39 @@ export const deleteBook = async (req, res) => {
   await Book.findByIdAndDelete(req.params.id);
   res.json({ message: "Book deleted" });
 };
+
+
+export const BooksSample = async (req, res) => {
+  try {
+    const sampleBooks = [
+      {
+        title: "The Alchemist",
+        author: "Paulo Coelho",
+        price: 299,
+        category: "Fiction",
+        publishYear: 1988
+      },
+      {
+        title: "Atomic Habits",
+        author: "James Clear",
+        price: 499,
+        category: "Self Help",
+        publishYear: 2018
+      },
+      {
+        title: "Think and Grow Rich",
+        author: "Napoleon Hill",
+        price: 350,
+        category: "Motivation",
+        publishYear: 1937
+      }
+    ];
+
+    await Book.insertMany(sampleBooks);
+
+    res.json({ message: "Sample books inserted successfully!" });
+
+  } catch (err) {
+    res.status(500).json({ error: err.message });
+  }
+};
