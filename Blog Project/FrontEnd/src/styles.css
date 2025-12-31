@@ -1,0 +1,25 @@
+body {
+  font-family: Arial;
+  background: #f4f4f4;
+}
+
+.container {
+  width: 400px;
+  margin: auto;
+}
+
+form, .card {
+  background: white;
+  padding: 15px;
+  margin: 10px 0;
+}
+
+input, textarea, button {
+  width: 100%;
+  margin: 5px 0;
+  padding: 8px;
+}
+
+img {
+  width: 100%;
+}
