@@ -1,5 +1,4 @@
 
-https://github.com/user-attachments/assets/d7a6ee5a-d621-4102-9a77-2b6d1377a5f6
 <h1 align="center">🔐 Full Stack Login System (OTP + JWT)</h1>
 
 <p align="center">
@@ -22,7 +21,7 @@ exams, and interviews.
 
 
 
-https://github.com/user-attachments/assets/cfd3b47d-82b6-4442-aa51-e879876d87bd
+https://github.com/user-attachments/assets/d7a6ee5a-d621-4102-9a77-2b6d1377a5f6
 
 
 
