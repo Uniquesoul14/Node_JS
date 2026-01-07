@@ -1,0 +1,16 @@
+{
+  "name": "auth-frontend",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vite"
+  },
+  "dependencies": {
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "react-router-dom": "^6.30.2"
+  },
+  "devDependencies": {
+    "vite": "^5.0.0"
+  }
+}
